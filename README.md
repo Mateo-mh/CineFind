@@ -47,7 +47,7 @@ CineFind facilita a los usuarios encontrar información sobre películas de mane
    ```
 3. Instala las dependencias:
    ```bash
-   npm install
+   pnpm install
    ```
 4. Configura tu clave de API de TMDb en el archivo de configuración.
 
@@ -55,7 +55,7 @@ CineFind facilita a los usuarios encontrar información sobre películas de mane
 
 Inicia la aplicación en modo de desarrollo:
 ```bash
-npm start
+pnpm run dev
 ```
 Abre [http://localhost:3000](http://localhost:3000) para ver la aplicación en tu navegador.
 
