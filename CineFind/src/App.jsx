@@ -20,12 +20,10 @@ function App() {
             path="/movies"
             element={
               <MoviePage
-                // Pasamos una función para actualizar el estado de isMoviesRoute
                 setIsMoviesRoute={setIsMoviesRoute}
               />
             }
           />
-          {/* Ruta para la página de inicio */}
           <Route path="/" element={<HomePage isMoviesRoute={isMoviesRoute} />} />
         </Routes>
       </div>
