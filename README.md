@@ -13,7 +13,7 @@ CineFind facilita a los usuarios encontrar información sobre películas de mane
    - Lista de resultados de búsqueda de películas coincidentes.
 
 2. **Detalles de Película:**
-   - Página con detalles específicos de la película seleccionada (título, descripción, fecha de lanzamiento, puntuación, etc.).
+   - Página con detalles específicos de la película seleccionada (título, descripción, fecha de lanzamiento, puntuación).
 
 3. **Integración con API:**
    - Uso de la API de TMDb para realizar consultas de búsqueda y obtener detalles de películas. Las llamadas HTTP se realizan mediante Fetch API o Axios.
