@@ -4,7 +4,7 @@ import React from 'react';
 
 function HeaderItem({ name, Icon }) {
   return (
-    <div className='relative text-white flex items-center gap-2 text-[16px] font-semibold cursor-pointer mb-2'>
+    <div className='relative text-white flex items-center gap-2 text-[16px] font-semibold cursor-pointer mb-2 py-2'>
       <Icon />
       <h2 className='relative group'>
         <span className='relative z-10'>{name}</span>
