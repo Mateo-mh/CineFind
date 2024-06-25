@@ -30,10 +30,10 @@ function Slider() {
     }
 
     return (
-        <div className="fixed w-full top-20 left-0">
-            <HiChevronLeft className="hidden md:block text-white text-[30px] absolute left-4 top-1/2 transform -translate-y-1/2 cursor-pointer z-10" 
+        <div className="min-w-full top-20 left-0 mt-10 text-left pl-0">
+            <HiChevronLeft className="hidden md:block text-white text-[30px] absolute left-20 top-[38%] transform -translate-y-1/2 cursor-pointer z-10" 
             onClick={()=>sliderLeft(elementRef.current)} />
-            <HiChevronRight className="hidden md:block text-white text-[30px] absolute right-4 top-1/2 transform -translate-y-1/2 cursor-pointer z-10" 
+            <HiChevronRight className="hidden md:block text-white text-[30px] absolute right-20 top-[38%] transform -translate-y-1/2 cursor-pointer z-10" 
             onClick={()=>sliderRight(elementRef.current)} />
 
             <div className="flex overflow-x-auto px-16 py-4 scrollbar-none scroll-smooth" ref={elementRef}>
