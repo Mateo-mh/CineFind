@@ -57,7 +57,6 @@ Inicia la aplicación en modo de desarrollo:
 ```bash
 pnpm run dev
 ```
-Abre [http://localhost:3000](http://localhost:3000) para ver la aplicación en tu navegador.
 
 ## Contribuciones
 
