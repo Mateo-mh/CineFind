@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import logo from "./../../assets/images/logo.png";
 import { HiHome, HiPlayCircle } from "react-icons/hi2";
+import { Link } from 'react-router-dom'; // Importa Link desde react-router-dom
 import HeaderItem from './HeaderItem';
 import ModalCard from '../Cards/ModalCard';
 
@@ -15,14 +16,14 @@ function Header() {
   const handleSearch = async (e) => {
     e.preventDefault();
     try {
-      const apiKey = 'a84c9a23c13fab9faf36a06b6f43fd09'; // Reemplaza con tu clave de API de TMDb
+      const apiKey = 'a84c9a23c13fab9faf36a06b6f43fd09';
       const response = await axios.get(`https://api.themoviedb.org/3/search/movie`, {
         params: {
           api_key: apiKey,
           query: searchQuery,
         }
       });
-      const movie = response.data.results[0]; // Tomamos la primera película de los resultados
+      const movie = response.data.results[0]; 
       if (movie) {
         setSelectedMovie(movie);
         setShowModal(true);
@@ -37,7 +38,7 @@ function Header() {
 
   const menu = [
     { name: 'HOME', icon: HiHome },
-    { name: 'MOVIES', icon: HiPlayCircle },
+    { name: 'MOVIES', icon: HiPlayCircle, path: '/movies' }, // Agrega la propiedad path para 'MOVIES'
   ];
 
   return (
@@ -47,12 +48,16 @@ function Header() {
           <img src={logo} alt="Logo" className="w-[35px] md:w-[40px] object-cover mr-4" />
           <div className="hidden md:flex gap-8">
             {menu.map((item) => (
-              <HeaderItem key={item.name} name={item.name} Icon={item.icon} />
+              <Link to={item.path || '/'} key={item.name} className="text-white"> {/* Usa Link para navegar */}
+                <HeaderItem name={item.name} Icon={item.icon} />
+              </Link>
             ))}
           </div>
           <div className="flex md:hidden gap-8">
             {menu.map((item, index) => index < 3 && (
-              <HeaderItem key={item.name} name={''} Icon={item.icon} />
+              <Link to={item.path || '/'} key={item.name} className="text-white"> {/* Usa Link para navegar */}
+                <HeaderItem name={''} Icon={item.icon} />
+              </Link>
             ))}
           </div>
         </div>
