@@ -1,5 +1,6 @@
 import './App.css'
 import Header from './Components/navBar/Header'
+import Slider from './Components/Slider/Slider'
 
 function App() {
 
@@ -8,6 +9,7 @@ function App() {
     <>
       <div className="App">
         <Header />
+        <Slider />
       </div>
     </>
   )
